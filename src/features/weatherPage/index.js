@@ -1,10 +1,17 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
 import { Container } from "../../common/Container";
 import { Section } from "../../common/Section";
 import { Input } from "./styled";
+import { fetchWeather } from "./weatherPageSlice";
 
 export const WeatherPage = () => {
+  const dispatch = useDispatch();
   const [value, setValue] = useState('');
+
+  useEffect(() => {
+    dispatch(fetchWeather());
+  }, [dispatch]);
 
   const onFormSubmit = e => {
     e.preventDefault();
@@ -32,7 +39,7 @@ export const WeatherPage = () => {
       </Section>
       <Section>
         <div>
-          
+          {value}
         </div>
       </Section>
     </Container>
