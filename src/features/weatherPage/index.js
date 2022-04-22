@@ -1,26 +1,43 @@
 import { useEffect, useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { Container } from "../../common/Container";
 import { Section } from "../../common/Section";
 import { Input } from "./styled";
-import { fetchWeather } from "./weatherPageSlice";
+import { fetchWeather, selectWeather } from "./weatherPageSlice";
 
 export const WeatherPage = () => {
   const dispatch = useDispatch();
-  const [value, setValue] = useState('');
+  const location = useLocation();
+  const navigate = useNavigate();
+  const { main } = useSelector(selectWeather);
+
+  const query = (new URLSearchParams(location.search)).get("search");
 
   useEffect(() => {
-    dispatch(fetchWeather());
-  }, [dispatch]);
+    dispatch(fetchWeather({ query }));
+  }, [dispatch, query]);
 
   const onFormSubmit = e => {
     e.preventDefault();
-    console.log(value);
-    setValue('');
-  }
+  };
 
   const onInputChange = ({ target }) => {
-    setValue(target.value);
+    const searchParams = new URLSearchParams(location.search);
+
+    if (target.value.trim() === "") {
+      searchParams.delete("search");
+    } else {
+      searchParams.set("search", target.value);
+    }
+
+    navigate({
+      pathname: location.pathname,
+      search: searchParams.toString()
+    });
+
+    
   }
 
   return (
@@ -30,7 +47,6 @@ export const WeatherPage = () => {
           onSubmit={onFormSubmit}
         >
           <Input
-            value={value}
             onChange={onInputChange}
             type="text"
             placeholder="name of the city"
@@ -39,7 +55,7 @@ export const WeatherPage = () => {
       </Section>
       <Section>
         <div>
-          {value}
+          {main ? main.temp : ""}
         </div>
       </Section>
     </Container>
