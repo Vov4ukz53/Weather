@@ -5,4 +5,9 @@ export const Section = styled.section`
   padding: 20px;
   background: ${({theme}) => theme.colors.white};
   border-radius: 5px;
+  box-shadow: 2px 2px 5px ${({theme}) => theme.colors.white};
+
+  @media(max-width: ${({ theme }) => theme.breakpoints.mobile}){
+    padding: 10px;
+  }
 `;
