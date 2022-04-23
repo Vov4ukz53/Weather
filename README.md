@@ -5,6 +5,17 @@ Here you can see my [demo](https://vov4ukz53.github.io/weather/)
 ## How to use
 ![how to use](https://i.ibb.co/s68Ywsp/weather.gif)
 
+## Used Technologies:
+- HTML5
+- CSS
+- JavaScript/ES6+ Features
+- Create React App
+- React + Redux
+- Redux-Saga
+- React Router
+- React Hooks
+- Custom Hooks
+- Styled Components
 
 ### Getting Started with Create React App
 
