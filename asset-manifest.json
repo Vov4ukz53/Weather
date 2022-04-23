@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/Vov4ukz53/Weather.git/static/js/main.41108d97.js",
+    "main.js": "/Vov4ukz53/Weather.git/static/js/main.c1560630.js",
     "static/js/787.13d76ca7.chunk.js": "/Vov4ukz53/Weather.git/static/js/787.13d76ca7.chunk.js",
     "static/media/background.jpg": "/Vov4ukz53/Weather.git/static/media/background.d522faaea65f47994493.jpg",
     "index.html": "/Vov4ukz53/Weather.git/index.html",
-    "main.41108d97.js.map": "/Vov4ukz53/Weather.git/static/js/main.41108d97.js.map",
+    "main.c1560630.js.map": "/Vov4ukz53/Weather.git/static/js/main.c1560630.js.map",
     "787.13d76ca7.chunk.js.map": "/Vov4ukz53/Weather.git/static/js/787.13d76ca7.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.41108d97.js"
+    "static/js/main.c1560630.js"
   ]
 }
