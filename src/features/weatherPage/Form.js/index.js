@@ -7,10 +7,6 @@ export const Form = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const onFormSubmit = e => {
-    e.preventDefault();
-  };
-
   const onInputChange = ({ target }) => {
     const searchParams = new URLSearchParams(location.search);
 
@@ -28,16 +24,12 @@ export const Form = () => {
 
   return (
     <Section>
-      <form
-        onSubmit={onFormSubmit}
-      >
         <Input
           onChange={onInputChange}
           type="text"
           title="English only!"
           placeholder="name of the city"
         />
-      </form>
     </Section>
   )
 };
