@@ -1,23 +1,26 @@
 import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { Container } from "../../common/Container";
 import { Form } from "./Form.js";
 import { fetchWeather } from "./weatherPageSlice";
 import { Result } from "./Result";
+import { Title } from "./styled";
+import { useQueryParameter } from "./useQueryParameter";
 
 export const WeatherPage = () => {
   const dispatch = useDispatch();
-  const location = useLocation();
-  const query = (new URLSearchParams(location.search)).get("search");
+  const query = useQueryParameter("search");
 
   useEffect(() => {
-    dispatch(fetchWeather({ query }));
+    query !== null &&
+      dispatch(fetchWeather({ query }));
   }, [dispatch, query]);
 
   return (
     <Container>
-      <h1>Look at the weather of the selected city.</h1>
+      <Title>
+        Look at the weather of the selected city.
+      </Title>
       <Form />
       <Result />
     </Container>
