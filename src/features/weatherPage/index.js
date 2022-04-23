@@ -3,7 +3,6 @@ import { useLocation } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { Container } from "../../common/Container";
 import { Form } from "./Form.js";
-
 import { fetchWeather } from "./weatherPageSlice";
 import { Result } from "./Result";
 

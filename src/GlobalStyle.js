@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import background from "./images/background.jpg";
 
 export const GlobalStyle = createGlobalStyle`
   html {
@@ -9,6 +10,8 @@ export const GlobalStyle = createGlobalStyle`
   }
   body {
     font-family: 'Poppins', sans-serif;
-    background: ${({ theme }) => theme.colors.blue};
+    background: url(${background}) 0 0 no-repeat ;
+    background-size: cover;
+    height: 100vh;
   }
 `;
