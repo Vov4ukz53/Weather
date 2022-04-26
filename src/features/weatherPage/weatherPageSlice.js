@@ -32,6 +32,7 @@ export const {
 const selectWeatherState = state => state.weather;
 
 export const selectWeather = state => selectWeatherState(state).weather;
+export const selectLoading = state => selectWeatherState(state).loading;
 export const selectError = state => selectWeatherState(state).error;
 
 export default weatherSlice.reducer;

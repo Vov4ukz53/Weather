@@ -1,9 +1,10 @@
 import { useSelector } from "react-redux";
-import { selectWeather } from "../../weatherPageSlice";
+import { selectLoading, selectWeather } from "../../weatherPageSlice";
 import { Section } from "../../../../common/Section";
 import { Title, Info } from "./styled";
 
 export const Response = () => {
+  const loading = useSelector(selectLoading);
   const {
     name,
     weather,
@@ -12,7 +13,7 @@ export const Response = () => {
     wind,
   } = useSelector(selectWeather);
 
-  return weather &&
+  return weather && !loading &&
     <Section>
       <Title>Search results for <em>{name}</em> :</Title>
       <Info>temperature : <em>{`${main.temp.toFixed()} ℃`}</em></Info>
