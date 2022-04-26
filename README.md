@@ -1,5 +1,5 @@
 # *Weather*
-Web site where you can look at the weather of the selected city.
+Web site where you can check the weather forecast in your current location.
 Here you can see my [demo](https://vov4ukz53.github.io/weather/)
 
 ## How to use
