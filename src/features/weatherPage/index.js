@@ -19,7 +19,7 @@ export const WeatherPage = () => {
   return (
     <Container>
       <Title>
-        Look at the weather of the selected city.
+        Check the weather forecast in your current location.
       </Title>
       <Form />
       <Result />
