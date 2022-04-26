@@ -1,5 +1,7 @@
 # *Weather*
 Web site where you can check the weather forecast in your current location.
+
+## Demo
 Here you can see my [demo](https://vov4ukz53.github.io/weather/)
 
 ## How to use
