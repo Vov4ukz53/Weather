@@ -12,6 +12,6 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'Poppins', sans-serif;
     background: url(${background}) 0 0 no-repeat;
     background-size: cover;
-    height: 100vh;
+    min-height: 100vh;
   }
 `;
