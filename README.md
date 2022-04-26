@@ -3,7 +3,7 @@ Web site where you can look at the weather of the selected city.
 Here you can see my [demo](https://vov4ukz53.github.io/weather/)
 
 ## How to use
-![how to use](https://i.ibb.co/s68Ywsp/weather.gif)
+![how to use](https://i.ibb.co/16XYxdf/weather1.gif)
 
 ## Used Technologies:
 - HTML5
