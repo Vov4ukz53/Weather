@@ -5,9 +5,11 @@ export const GlobalStyle = createGlobalStyle`
   html {
     box-sizing: border-box;
   }
+
   *, ::after, ::before {
     box-sizing: inherit;
   }
+  
   body {
     font-family: 'Poppins', sans-serif;
     background: url(${background}) 0 0 no-repeat;
